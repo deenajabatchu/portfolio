@@ -116,38 +116,65 @@
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Add the rest of your sections like About, Projects, Skills, Experience, etc., here using your existing content -->
 
   <!-- About Section -->
-<section id="about" class="container">
+<section id="about" class="container py-5">
   <div class="row align-items-center">
-    <div class="col-md-4 text-center">
-      <img src="{{ url_for('static', filename='images/mypic.jpg') }}" alt="Deenaja Batchu" class="img-fluid rounded-circle mb-2 ml-2" />
+    
+    <!-- Profile Image -->
+    <div class="col-md-4 text-center mb-4 mb-md-0">
+      <img src="{{ url_for('static', filename='images/mypic.jpg') }}" 
+           alt="Deenaja Batchu" 
+           class="rounded-circle shadow" 
+           style="width: 220px; height: 220px; object-fit: cover; border: 5px solid #f2f2f2;" />
     </div>
+    
+    <!-- About Content -->
     <div class="col-md-8">
-      <h2>About Me</h2>
-      <p>Aspiring Software Engineer with a strong foundation in Python Full Stack Development, DSA, JavaScript. <br>
-        A top-performing student in my department, passionate about building efficient and scalable solutions.<br> 
-        Eager to apply my problem-solving skills and technical expertise to real-world challenges in a dynamic and growth-oriented environment.</p>
+      
+      <!-- Education Section -->
+      <div class="mb-4">
+        <h4 class="fw-bold">🎓 Education</h4>
+        <ul class="list-unstyled ms-3">
+          <li><strong>B.Tech in CSE</strong> – Sir C.R. Reddy College of Engineering, Eluru (2022–2026) – CGPA: 9.05</li>
+          <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College, Repalle – 96%</li>
+        </ul>
+      </div>
+
+      <!-- About Me Text -->
+      <h2 class="fw-bold">About Me</h2>
       <p>
-        <img src="{{ url_for('static', filename='images/email.png') }}" width="20" alt="Email" /> 
-        <a href="mailto:deenajabatchu@gmail.com">deenajabatchu@gmail.com</a> &nbsp;&nbsp;
-        <a href="https://www.linkedin.com/in/deenaja-batchu" target="_blank">
-          <img src="{{ url_for('static', filename='images/linkedin.png') }}" width="20" alt="LinkedIn" />LinkedIn
-        </a> &nbsp;&nbsp;
-        <a href="https://github.com/deenajabatchu" target="_blank">
-          <img src="{{ url_for('static', filename='images/github.png') }}" width="20" alt="GitHub" />GitHub
-        </a>
+        Aspiring Software Engineer with a strong foundation in Python Full Stack Development, DSA, and JavaScript.<br>
+        A top-performing student in my department, passionate about building efficient and scalable solutions.<br> 
+        Eager to apply my problem-solving skills and technical expertise to real-world challenges in a dynamic and growth-oriented environment.
       </p>
+
+      <!-- Contact Links -->
+      <div class="mt-3">
+        <a href="mailto:deenajabatchu@gmail.com" class="d-inline-block me-4 mb-2">
+          <img src="{{ url_for('static', filename='images/email.png') }}" width="20" alt="Email" />
+          deenajabatchu@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/deenaja-batchu" target="_blank" class="d-inline-block me-4 mb-2">
+          <img src="{{ url_for('static', filename='images/linkedin.png') }}" width="20" alt="LinkedIn" />
+          LinkedIn
+        </a>
+        <a href="https://github.com/deenajabatchu" target="_blank" class="d-inline-block mb-2">
+          <img src="{{ url_for('static', filename='images/github.png') }}" width="20" alt="GitHub" />
+          GitHub
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- Projects Section -->
 <section id="projects" class="bg-light py-5">
@@ -159,8 +186,8 @@
       <div class="col-md-6">
         <h4>Notes Management System</h4>
         <p>Built a full-stack note-taking app using HTML, CSS, Bootstrap, Flask, MySQL, and SQLAlchemy. Enables users to create, view, edit, and delete notes with persistent data storage.</p>
-        <a href="https://github.com/deenajabatchu/NotesApp" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7338233284641886209/" target="_blank" class="btn btn-outline-primary btn-sm">Project Flow</a>
+        <a href="https://github.com/deenajabatchu/NotesApp" target="_blank" class="btn btn-outline-primary btn-sm me-3">GitHub</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7338233284641886209/" target="_blank" class="btn btn-outline-info btn-sm">Project Flow</a>
       </div>
       <div class="col-md-6 text-center">
         <img src="{{ url_for('static', filename='images/notes-app.png') }}" alt="Notes App" class="img-fluid rounded shadow" style="max-height: 250px; width: auto;" />
@@ -172,8 +199,8 @@
       <div class="col-md-6">
         <h4>Deenaja Bakery – Responsive Landing Page</h4>
         <p>Designed a fictional bakery website using HTML, CSS, and Bootstrap with a clean, animated UI. Fully responsive with intuitive navigation and engaging visuals.</p>
-        <a href="https://github.com/deenajabatchu/deenaja-bakery" target="_blank" class="btn btn-outline-primary btn-sm mr-2">GitHub</a>
-        <a href="https://www.linkedin.com/posts/deenaja-batchu_frontenddevelopment-html-css-activity-7234618842105135105-11jC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEODE_AB6AgszMPDOdAB2XBNEWUGpLUtVjw" target="_blank" class="btn btn-outline-primary btn-sm">Project Flow</a>
+        <a href="https://github.com/deenajabatchu/deenaja-bakery" target="_blank" class="btn btn-outline-primary btn-sm mr-2 me-3">GitHub</a>
+        <a href="https://www.linkedin.com/posts/deenaja-batchu_frontenddevelopment-html-css-activity-7234618842105135105-11jC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEODE_AB6AgszMPDOdAB2XBNEWUGpLUtVjw" target="_blank" class="btn btn-outline-info btn-sm">Project Flow</a>
       </div>
       <div class="col-md-6 text-center">
         <img src="{{ url_for('static', filename='images/bakery.png') }}" alt="Bakery Website" class="img-fluid rounded shadow" style="max-height: 250px; width: auto;" />
@@ -190,7 +217,7 @@
           <li><b>Lift Management System:</b> Simulates an elevator responding to floor requests and direction logic using class-based architecture.</li>
           <li><b>Online Ticket Booking:</b> Mimics a ticket reservation system for transport with booking, cancellation, and seat status features.</li>
         </ul>
-        <a href="https://github.com/deenajabatchu/oop-python-mini-projects" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+        <a href="https://github.com/deenajabatchu/oop-python-mini-projects" target="_blank" class="btn btn-outline-primary btn-sm me-3">GitHub</a>
       </div>
   </div>
 </section>
@@ -275,8 +302,7 @@
       <a href="https://github.com/ShudarsanRegmi/InfoSys-SpringBoard-Fashion-Ecommerce-Project" target="_blank" class="btn btn-sm btn-outline-primary me-2">GitHub</a>
       <a href="{{ url_for('static', filename='certificates/infosys_certificate.png') }}" target="_blank" class="btn btn-sm btn-outline-success">Certificate</a>
       <ul class="mt-2">
-        <li>Built an interactive fashion shopping website using Flask, HTML, CSS, Bootstrap, SQLAlchemy, and pytest.</li>
-        <li>Integrated user authentication, product browsing, and checkout system for smooth functionality.</li>
+        <li>Completed an internship at Infosys Springboard, where I contributed to developing an Interactive Fashion E-Commerce Platform for admin, delivery staff, and consumers using HTML, CSS, JavaScript, Bootstrap, Python (Flask), Jinja, SQLAlchemy, and Pytest. Implemented secure authentication with SHA-256 hashing and followed Agile methodologies to meet a tight 3-month deadline. Our project was well-received by the Infosys review committee for its functionality and teamwork.</li>
       </ul>
     </div>
 
@@ -285,7 +311,7 @@
       <a href="https://github.com/deenajabatchu/portfolio" target="_blank" class="btn btn-sm btn-outline-primary me-2">GitHub</a>
       <a href="{{ url_for('static', filename='certificates/techsonix_certificate.jpg') }}" target="_blank" class="btn btn-sm btn-outline-success">Certificate</a>
       <ul class="mt-2">
-        <li>Developed a fully responsive personal portfolio website using HTML, CSS, JavaScript, and React.js.</li>
+        <li>Developed a fully responsive personal portfolio website using HTML, CSS, JavaScript and Flask.</li>
         <li>Showcased projects, experience, skills and achievements with modern UI and smooth navigation.</li>
       </ul>
     </div>
@@ -316,6 +342,69 @@
     <li>Infosys Springboard Pragati Cohort 2 Mentorship Program Student.</li>
   </ul>
 </section>
+
+
+<section id="certifications" class="container mt-5">
+  <h2 class="text-center mb-4">📜 Certifications</h2>
+  <div class="row">
+
+    <!-- Python Basics - HackerRank -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='certificates/pythonhackerrank.jpg') }}" class="card-img-top" alt="Python HackerRank">
+        <div class="card-body">
+          <h5 class="card-title">Python Basics</h5>
+          <p class="card-text">Completed on HackerRank</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pragati Cohort 2 - Infosys -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='certificates/pragati2cohort.jpg') }}" class="card-img-top" alt="Pragati Cohort 2">
+        <div class="card-body">
+          <h5 class="card-title">Infosys Pragati Cohort 2</h5>
+          <p class="card-text">Mentorship Program under Infosys Springboard</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GenAI - Microsoft -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='certificates/genaibymicrosoft.jpg') }}" class="card-img-top" alt="GenAI Microsoft">
+        <div class="card-body">
+          <h5 class="card-title">Generative AI</h5>
+          <p class="card-text">Certificate by Microsoft</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DSA by CareerNinja -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='certificates/dsabycareerninja.jpg') }}" class="card-img-top" alt="DSA CareerNinja">
+        <div class="card-body">
+          <h5 class="card-title">DSA Introduction</h5>
+          <p class="card-text">Completed on CareerNinja</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML/CSS by OpenWaver -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='certificates/htmlcssbyopenwaver.jpg') }}" class="card-img-top" alt="HTML CSS OpenWaver">
+        <div class="card-body">
+          <h5 class="card-title">HTML & CSS Basics</h5>
+          <p class="card-text">Certificate by OpenWaver</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
