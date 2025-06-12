@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deenaja Batchu Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    h1{
+      font-family:robot;
+    }
+    h4{
+      color :rgb(63, 61, 66);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #f1f5f9);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .navbar {
+      background: linear-gradient(to right,rgb(124, 65, 241),rgb(166, 84, 242));
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+    }
+
+    .img-rectangle {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 5px;
+    }
+
+    #skills div {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .btn-outline-primary {
+      border-color: #4a00e0;
+      color: #4a00e0;
+    }
+
+    .btn-outline-primary:hover {
+      background: #4a00e0;
+      color: white;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .marquee-container {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .marquee-container:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .img-rectangle {
+        margin-bottom: 20px;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Marquee Section -->
+  <div class="marquee-container" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+    🚀 Open to Work & Collaborations – Click Here to Contact Me!
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Deenaja Batchu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Add the rest of your sections like About, Projects, Skills, Experience, etc., here using your existing content -->
+
+  <!-- About Section -->
+<section id="about" class="container">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='images/mypic.jpg') }}" alt="Deenaja Batchu" class="img-fluid rounded-circle mb-2 ml-2" />
+    </div>
+    <div class="col-md-8">
+      <h2>About Me</h2>
+      <p>Aspiring Software Engineer with a strong foundation in Python Full Stack Development, DSA, JavaScript. <br>
+        A top-performing student in my department, passionate about building efficient and scalable solutions.<br> 
+        Eager to apply my problem-solving skills and technical expertise to real-world challenges in a dynamic and growth-oriented environment.</p>
+      <p>
+        <img src="{{ url_for('static', filename='images/email.png') }}" width="20" alt="Email" /> 
+        <a href="mailto:deenajabatchu@gmail.com">deenajabatchu@gmail.com</a> &nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/deenaja-batchu" target="_blank">
+          <img src="{{ url_for('static', filename='images/linkedin.png') }}" width="20" alt="LinkedIn" />LinkedIn
+        </a> &nbsp;&nbsp;
+        <a href="https://github.com/deenajabatchu" target="_blank">
+          <img src="{{ url_for('static', filename='images/github.png') }}" width="20" alt="GitHub" />GitHub
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-5">Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-6">
+        <h4>Notes Management System</h4>
+        <p>Built a full-stack note-taking app using HTML, CSS, Bootstrap, Flask, MySQL, and SQLAlchemy. Enables users to create, view, edit, and delete notes with persistent data storage.</p>
+        <a href="https://github.com/deenajabatchu/NotesApp" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7338233284641886209/" target="_blank" class="btn btn-outline-primary btn-sm">Project Flow</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="{{ url_for('static', filename='images/notes-app.png') }}" alt="Notes App" class="img-fluid rounded shadow" style="max-height: 250px; width: auto;" />
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="row mb-5 align-items-center flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>Deenaja Bakery – Responsive Landing Page</h4>
+        <p>Designed a fictional bakery website using HTML, CSS, and Bootstrap with a clean, animated UI. Fully responsive with intuitive navigation and engaging visuals.</p>
+        <a href="https://github.com/deenajabatchu/deenaja-bakery" target="_blank" class="btn btn-outline-primary btn-sm mr-2">GitHub</a>
+        <a href="https://www.linkedin.com/posts/deenaja-batchu_frontenddevelopment-html-css-activity-7234618842105135105-11jC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEODE_AB6AgszMPDOdAB2XBNEWUGpLUtVjw" target="_blank" class="btn btn-outline-primary btn-sm">Project Flow</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="{{ url_for('static', filename='images/bakery.png') }}" alt="Bakery Website" class="img-fluid rounded shadow" style="max-height: 250px; width: auto;" />
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-6">
+        <h4>Python OOP Mini Projects</h4>
+        <ul>
+          <li><b>ATM Machine:</b> Simulates ATM operations like deposit, withdrawal, and balance check with PIN authentication using OOP principles.</li>
+          <li><b>Parking Lot System:</b> Models a multi-level parking lot where vehicles enter/exit and parking slots are managed in real-time.</li>
+          <li><b>Lift Management System:</b> Simulates an elevator responding to floor requests and direction logic using class-based architecture.</li>
+          <li><b>Online Ticket Booking:</b> Mimics a ticket reservation system for transport with booking, cancellation, and seat status features.</li>
+        </ul>
+        <a href="https://github.com/deenajabatchu/oop-python-mini-projects" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+      </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="container py-4 bg-white">
+  <h2 class="mb-4">Technical Skills</h2>
+  <div class="d-flex flex-wrap justify-content-start gap-4">
+    
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/python.png') }}" class="skill-icon" alt="Python" title="Python" />
+      <div>Python</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/flask.png') }}" class="skill-icon" alt="Flask" title="Flask" />
+      <div>Flask</div>
+    </div>
+
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/html5.png') }}" class="skill-icon" alt="HTML" title="HTML" />
+      <div>HTML</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/css.png') }}" class="skill-icon" alt="CSS" title="CSS" />
+      <div>CSS</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/bootstrap.png') }}" class="skill-icon" alt="Bootstrap" title="Bootstrap" />
+      <div>Bootstrap</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/react.png') }}" class="skill-icon" alt="React.js" title="React.js" />
+      <div>React.js</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/git.png') }}" class="skill-icon" alt="Git" title="Git" />
+      <div>Git</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/javascript.png') }}" class="skill-icon" alt="Javascript" title="Javascript" />
+      <div>Javascript</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/mysql.png') }}" class="skill-icon" alt="MySQL" title="MySQL" />
+      <div>MySQL</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/sqlalchemy.png') }}" class="skill-icon" alt="SQLAlchemy" title="SQLAlchemy" />
+      <div>SQLAlchemy</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/datastructure.jpg') }}" class="skill-icon" alt="DSA" title="DSA" />
+      <div>DSA</div>
+    </div>
+
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='images/java.png') }}" class="skill-icon" alt="Java" title="Java" />
+      <div>Java</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="bg-light py-4">
+  <div class="container">
+    <h2 class="mb-4">Experience</h2>
+
+    <div class="mb-4">
+      <h4>Infosys Springboard | Python Full Stack Intern </h4>
+      <a href="https://github.com/ShudarsanRegmi/InfoSys-SpringBoard-Fashion-Ecommerce-Project" target="_blank" class="btn btn-sm btn-outline-primary me-2">GitHub</a>
+      <a href="{{ url_for('static', filename='certificates/infosys_certificate.png') }}" target="_blank" class="btn btn-sm btn-outline-success">Certificate</a>
+      <ul class="mt-2">
+        <li>Built an interactive fashion shopping website using Flask, HTML, CSS, Bootstrap, SQLAlchemy, and pytest.</li>
+        <li>Integrated user authentication, product browsing, and checkout system for smooth functionality.</li>
+      </ul>
+    </div>
+
+    <div class="mb-4">
+      <h4>Techsonix Solutions | Web Development Intern </h4>
+      <a href="https://github.com/deenajabatchu/portfolio" target="_blank" class="btn btn-sm btn-outline-primary me-2">GitHub</a>
+      <a href="{{ url_for('static', filename='certificates/techsonix_certificate.jpg') }}" target="_blank" class="btn btn-sm btn-outline-success">Certificate</a>
+      <ul class="mt-2">
+        <li>Developed a fully responsive personal portfolio website using HTML, CSS, JavaScript, and React.js.</li>
+        <li>Showcased projects, experience, skills and achievements with modern UI and smooth navigation.</li>
+      </ul>
+    </div>
+
+    <div class="mb-4">
+      <h4>Oasis Infobyte | Python Developer Intern </h4>
+      <a href="https://github.com/deenajabatchu/OIBSIP" target="_blank" class="btn btn-sm btn-outline-primary me-2">GitHub</a>
+      <a href="{{ url_for('static', filename='certificates/oasis_certificate.png') }}" target="_blank" class="btn btn-sm btn-outline-success">Certificate</a>
+      <ul class="mt-2">
+        <li>Built mini apps like BMI Calculator and Random Password Generator using Python.</li>
+        <li>Practiced debugging, clean code practices, and improved Python basics.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Achievements Section -->
+<section id="achievements" class="container">
+  <h2 class="mb-4">Achievements and Extra-Curricular Activities</h2>
+  <ul>
+    <li>Finalist in JAGSoM Humanification Case Challenge 2025 by Apna Foundation.</li>
+    <li>5 Stars in Python on HackerRank.</li>
+    <li>Contributor to GirlScript Summer of Code (GSSoC).</li>
+    <li>Participant in Google Girl Hackathon.</li>
+    <li>Winner of multiple Tech Expos, Paper and PPT Presentations.</li>
+    <li>Infosys Springboard Pragati Cohort 2 Mentorship Program Student.</li>
+  </ul>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <h2 class="mb-4 text-center">Contact Me</h2>
+      <div class="w-100" style="max-width: 600px;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }} text-center">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form method="POST" class="contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
